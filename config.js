@@ -25,8 +25,9 @@ if (!!process.env.S3_ACCESS_KEY_ID) {
 config = {
 
   // Production (Heroku)
+  //   // url: process.env.HEROKU_URL
   production: {
-    url: process.env.HEROKU_URL,
+    url: "http://katymonaghan.co.uk",
     mail: {
       transport: 'SMTP',
       options: {
