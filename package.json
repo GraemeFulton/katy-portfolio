@@ -10,7 +10,6 @@
   "private": true,
   "version": "0.7.0",
   "dependencies": {
-    "Casper": "TryGhost/Casper#1.2.6",
     "express-hbs": "^0.8.4",
     "ghost": "0.7.0",
     "ghost-s3-storage": "~0.2.1",
