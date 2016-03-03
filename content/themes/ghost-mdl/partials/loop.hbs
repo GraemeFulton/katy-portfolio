@@ -1,0 +1,36 @@
+
+
+
+
+<section class="post-container">
+  {{! Previous/next page links - only displayed on page 2+ }}
+  <!-- <div class=" mdl-grid mdl-cell--12-col-desktop extra-pagination inner">
+      {{pagination}}
+  </div> -->
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+
+<section class="mdl-grid" style="padding-left:0px">
+            <a href="{{url}}" class="mdl-cell mdl-cell--4-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone" style='background-image: url({{image}});background-position: 50%;background-size: cover;'>
+            </a>
+            <div class="mdl-card mdl-cell mdl-cell--8-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4 class="loop-title"><a href="{{url}}">{{{title}}}</a></h4>
+                {{excerpt words="20"}}
+              </div>
+              <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                {{#if author.image}}<div class="minilogo"><img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" /></div>{{/if}}
+                <div>
+                  <strong>Graeme {{tags prefix=" on "}}</strong>
+                  <span>
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                  </span>
+                </div>
+              </div>
+          </section>
+{{/foreach}}
+<section class=" mdl-grid mdl-cell--8-col-desktop inner extra-pagination bottom">
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}
+</section>
+</section>
